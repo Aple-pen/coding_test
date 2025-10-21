@@ -9,4 +9,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # 실행 파일 생성
 add_executable(MY_CODING_TEST main.cpp)
 
-include_directories(${CMAKE_SOURCE_DIR}/solutions ${CMAKE_SOURCE_DIR}/DataStructure)
+include_directories(${CMAKE_SOURCE_DIR}/solutions ${CMAKE_SOURCE_DIR}/DataStructure ${CMAKE_SOURCE_DIR}/test_solution)
