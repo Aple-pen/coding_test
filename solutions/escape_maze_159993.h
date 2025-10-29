@@ -20,14 +20,39 @@
         - X : 벽
     - 시작 지점과 출구, 레버는 항상 다른 곳에 존재하며 한 개씩만 존재한다.
     - 출구는 레버가 당겨지지 않아도 지나갈 수 있으며, 모든 통로, 출구, 레버, 시작점은 여러번 지나갈 수 있다.
+
+입출력 예: 
+    maps                                        result
+    {"SOOOL","XXXXO","OOOOO","OXXXXX","OOOOE"}  16
+    {"LOOXS","OOOOX","OOOOO","OOOOO","EOOOO"}   -1
 */
+#pragma once
+#include <iostream>
+#include <vector>
+#include <queue>
+namespace escape_maze_159993{
+    struct Point{
+        int x;
+        int y;
+        bool visited;
+    };
 
+    Point findStartPoint(std::vector<std::string> &maps){
+        for(int i = 0;i<maps.size();i++){
+            for(int j = 0;j<maps[i].size();j++){
+                std::cout << maps[i][j];
+            }
+            std::cout << "\n";
+        }
+        return {3,5,false};
+    }
 
-struct Point{
-    int x;
-    int y;
-};
+    void bfs(Point start, Point end, std::vector<std::string> &maps){
+        std::queue<Point> q;
+    }
 
-void bfs(Point start, Point end, vector<string> &maps){
-
+    int solution(std::vector<std::string>maps){
+        findStartPoint(maps);
+        return 1;
+    }
 }
